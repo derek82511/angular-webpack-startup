@@ -1,16 +1,13 @@
-import moment from 'moment';
+export default class HomeController {
+    constructor($interval, Util) {
+        this.title = 'Angular Webpack Startup';
 
-export default ['$interval', function($interval) {
-    const self = this;
-
-    init();
-
-    function init() {
-        self.title = 'Angular Webpack Startup';
-
-        $interval(function() {
-            self.timeStamp = moment(new Date()).format('YYYY/MM/DD HH:mm:ss');
+        $interval(() => {
+            this.timeStamp = Util.getDateTime();
         }, 1000);
-    }
 
-}];
+        console.log(Util.getText());
+    }
+}
+
+HomeController.$inject = ['$interval', 'Util'];

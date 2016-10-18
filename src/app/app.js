@@ -8,15 +8,18 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 import angular from 'angular';
 import angularUiRouter from 'angular-ui-router'
 
-import appConfig from './app.config';
-import appRun from './app.run';
+import AppConfig from './app.config';
+import AppRun from './app.run';
 
-import homeController from './controllers/homeController';
+import Util from './services/util';
+
+import HomeController from './controllers/homeController';
 
 angular.module('app', [angularUiRouter])
-    .config(appConfig)
-    .run(appRun)
-    .controller('HomeController', homeController)
+    .config(AppConfig)
+    .run(AppRun)
+    .factory('Util', Util)
+    .controller('HomeController', HomeController)
 
 angular.element(document).ready(function() {
     angular.bootstrap(document, ['app']);

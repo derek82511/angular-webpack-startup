@@ -1,4 +1,4 @@
-export default ['$stateProvider', function($stateProvider) {
+export default function AppConfig($stateProvider) {
     $stateProvider
         .state('home', {
             url: "/",
@@ -7,4 +7,6 @@ export default ['$stateProvider', function($stateProvider) {
             controllerAs: "homeCtrl"
         })
 
-}];
+};
+
+AppConfig.$inject = ['$stateProvider'];
