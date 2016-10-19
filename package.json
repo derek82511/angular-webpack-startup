@@ -26,7 +26,6 @@
     "less": "^2.7.1",
     "node-libs-browser": "^1.0.0",
     "null-loader": "^0.1.1",
-    "phantomjs-prebuilt": "^2.1.4",
     "raw-loader": "^0.5.1",
     "rimraf": "^2.5.1",
     "style-loader": "^0.13.0",
